@@ -5,6 +5,7 @@
 #include "frontend/parser.hpp"
 #include "runtime/interpreter.hpp"
 #include <fstream>
+#include <fmt/core.h>
 
 using namespace runtime;
 
@@ -27,6 +28,7 @@ int main(int argc, char* argv[]) {
 
         Interpreter interpret;
         auto thing = interpret.evaluate(program);
+        fmt::print("{}", thing);
 
     } else {
         std::cout << "Missing argument: Yohohoscript file" << std::endl << "Usage: " << argv[0] << " <YohohoScript file>";
