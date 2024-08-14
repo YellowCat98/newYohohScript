@@ -16,5 +16,11 @@ values::RuntimeVal Interpreter::evaluate(AST::Stmt stmt) {
 
             return numval;
         }
+        default: {
+            AST::NullLiteral null;
+            values::NullVal thevalues;
+            thevalues.type = values::ValueType::null;
+            return thevalues;
+        }
     }
 }
