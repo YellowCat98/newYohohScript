@@ -28,7 +28,18 @@ int main(int argc, char* argv[]) {
 
         Interpreter interpret;
         auto thing = interpret.evaluate(program);
-        fmt::print("{}", thing);
+        try {
+            auto result = thing;
+        } catch (std::invalid_argument& e) {
+            fmt::print("Error: {}", e.what());
+        } catch (std::out_of_range& e) {
+            fmt::print("Out of range error: {}", e.what());
+        } catch (...) {
+            fmt::print("Unknown error.");
+        }
+        
+
+        
 
     } else {
         std::cout << "Missing argument: Yohohoscript file" << std::endl << "Usage: " << argv[0] << " <YohohoScript file>";

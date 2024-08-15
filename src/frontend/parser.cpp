@@ -4,6 +4,8 @@ using namespace frontend;
 
 Parser::Parser() : lexer() {}
 
+Parser::~Parser() = default;
+
 bool Parser::isNotEOF() {
     return tokens[0].type != Lexer::TokenType::END_OF_FILE;
 }
