@@ -23,7 +23,6 @@ namespace frontend {
             Program() {
                 kind = NodeType::Program;
             }
-            ~Program() = default;
 
             std::deque<Stmt> body;
         };

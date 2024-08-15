@@ -31,7 +31,7 @@ namespace frontend {
 
         Token token(std::string value, TokenType type);
         Lexer();
-        virtual ~Lexer();
+
         std::deque<Token> tokenize(std::string sourceCode);
     };
 }

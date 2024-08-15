@@ -23,6 +23,5 @@ namespace frontend {
     public:
         AST::Program produceAST(std::string sourceCode);
         Parser();
-        virtual ~Parser();
     };
 }

@@ -9,7 +9,7 @@ std::map<std::string, frontend::Lexer::TokenType> frontend::Lexer::KEYWORDS = {
 };
 
 Lexer::Lexer() {}
-Lexer::~Lexer() = default;
+
 
 Lexer::Token Lexer::token(std::string value, TokenType type) {
     return {value, type};
